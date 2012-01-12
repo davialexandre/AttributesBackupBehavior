@@ -39,7 +39,7 @@ class AttributesBackupBehavior extends CActiveRecordBehavior {
     }
     
     public function getOldAttributeValue($attribute_name) {
-    	if(array_key_exists($attribute_name, $this->old_attribtues) && !$this->owner->isNewRecord) {
+    	if(array_key_exists($attribute_name, $this->oldAttributes) && !$this->owner->isNewRecord) {
     		return $this->oldAttributes[$attribute_name];
     	}
     	
