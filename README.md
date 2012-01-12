@@ -48,7 +48,7 @@ This should be used when you want to know if a specific attribute value was chan
 		var_dump($user->attributeChanged('status')); // TRUE
 	?>
 
-####getOldAttributeValue()
+###getOldAttributeValue()
 In case you need to retrieve the original value loaded from the database, this is the method you gonna 
 use:
 
