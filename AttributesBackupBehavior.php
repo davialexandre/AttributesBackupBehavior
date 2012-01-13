@@ -35,7 +35,7 @@ class AttributesBackupBehavior extends CActiveRecordBehavior {
     }
 
     public function attributeChanged($attribute_name) {
-        if(array_key_exists($this->oldAttributes[$attribute_name])) {
+        if(array_key_exists($attribute_name, $this->oldAttributes) && array_key_exists($attribute_name, $this->owner->attributes)) {
             return $this->oldAttributes[$attribute_name] != $this->owner->$attribute_name;
         }
 
